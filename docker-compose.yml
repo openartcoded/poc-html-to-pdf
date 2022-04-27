@@ -1,0 +1,10 @@
+version: '3.9'
+services: 
+  htmltopdf:
+    build: .
+    volumes:
+      - ./data:/data
+    environment:
+      HTML_INPUT_DIRECTORY: /data/html
+      PDF_OUTPUT_DIRECTORY: /data/pdf
+      RUST_LOG: debug
